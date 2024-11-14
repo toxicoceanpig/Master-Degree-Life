@@ -75,15 +75,9 @@
     </div>
 
     <!-- 文件上传按钮 -->
-    <label class="upload-btn" for="file-upload">Upload Video or Image</label>
-    <input id="file-upload" type="file" accept="image/*,video/*" />
+    <button class="upload-btn" onclick="window.location.href='chatbox'">Let's Study</button>
 
-    <!-- JavaScript 可选：展示上传的文件名 -->
-    <script>
-        document.getElementById("file-upload").addEventListener("change", function() {
-            let fileName = this.files[0].name;
-            alert("Selected file: " + fileName);
-        });
-    </script>
+    
+    
 </body>
 </html>

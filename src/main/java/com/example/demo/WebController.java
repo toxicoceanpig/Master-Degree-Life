@@ -15,4 +15,11 @@ public class WebController {
         // 返回名为 "home" 的模板
         return "home";
     }
+
+    @GetMapping("/chatbox")
+    public String chatboxPage() {
+        return "chatbox"; // 
+    }
+
+    
 }
