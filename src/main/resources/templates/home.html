@@ -100,30 +100,6 @@
     </div>
 
     <!-- 文件上传按钮 -->
-    <label class="upload-btn" for="file-upload">Upload Video or Image</label>
-    <input id="file-upload" type="file" accept="image/*,video/*" />
-
-    <!-- 生成文本的输入框和按钮 -->
-    <div class="generate-section">
-        <form action="/generate" method="post">
-            <label for="prompt" style="color: white;">Enter text for generation:</label>
-            <input type="text" id="prompt" name="prompt" required />
-            <button type="submit" class="generate-btn">Generate</button>
-        </form>
-    </div>
-
-    <!-- 显示API响应结果 -->
-    <div class="response-section" th:if="${response}">
-        <h2>Generated Text:</h2>
-        <p th:text="${response}"></p>
-    </div>
-
-    <!-- JavaScript 可选：展示上传的文件名 -->
-    <script>
-        document.getElementById("file-upload").addEventListener("change", function() {
-            let fileName = this.files[0].name;
-            alert("Selected file: " + fileName);
-        });
-    </script>
+    <button class="upload-btn" onclick="window.location.href='chatbox'">Let's Study</button>
 </body>
 </html>

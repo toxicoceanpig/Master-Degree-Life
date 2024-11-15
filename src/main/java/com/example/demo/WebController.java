@@ -25,4 +25,11 @@ public class WebController {
         model.addAttribute("response", response);
         return "home";
     }
+
+    @GetMapping("/chatbox")
+    public String chatboxPage() {
+        return "chatbox"; // 
+    }
+
+    
 }
