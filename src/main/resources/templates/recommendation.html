@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="recommendation-image" src="" alt="Recommendation">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const subject = prompt("What subject are you interested in?");
+            if (subject && subject.trim() !== "") {
+                const imageElement = document.getElementById('recommendation-image');
+                imageElement.src = `/api/recommendation?subject=${encodeURIComponent(subject.trim())}`;
+            } else {
+                alert("No subject entered.");
+            }
+        });
+    </script>
+</body>
+</html>
